@@ -1,12 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import * as React from "react";
+import { Container } from "@mui/material";
+import WAppBar from "./layouts/AppBar";
+import Copyright from "./layouts/CopyRight";
+import NewCustomer from "./pages/NewCustomer";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <React.Fragment>
+      {/* AppBar */}
+      <WAppBar />
+
+      {/* Container */}
+      <Container component="main" maxWidth="md" sx={{ mb: 4 }}>
+        {/* New Customer page */}
+        <NewCustomer />
+
+        {/* CopyRight */}
+        <Copyright />
+      </Container>
+    </React.Fragment>
+  );
 }
 
 export default App;
