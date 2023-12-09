@@ -2,7 +2,7 @@ import * as React from "react";
 import { TextareaAutosize as BaseTextareaAutosize } from "@mui/base/TextareaAutosize";
 import { styled } from "@mui/system";
 
-export default function MinHeightTextarea() {
+const MinHeightTextarea = () => {
   const blue = {
     100: "#DAECFF",
     200: "#b6daff",
@@ -77,4 +77,5 @@ export default function MinHeightTextarea() {
       className="w-full"
     />
   );
-}
+};
+export default MinHeightTextarea;

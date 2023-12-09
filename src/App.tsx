@@ -1,24 +1,17 @@
-import * as React from "react";
-import { Container } from "@mui/material";
-import WAppBar from "./layouts/AppBar";
-import Copyright from "./layouts/CopyRight";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import NewCustomer from "./pages/NewCustomer";
+import OldCustomer from "./pages/OldCustomer";
 
 function App() {
   return (
-    <React.Fragment>
-      {/* AppBar */}
-      <WAppBar />
-
-      {/* Container */}
-      <Container component="main" maxWidth="md" sx={{ mb: 4 }}>
-        {/* New Customer page */}
-        <NewCustomer />
-
-        {/* CopyRight */}
-        <Copyright />
-      </Container>
-    </React.Fragment>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="book" element={<NewCustomer />} />
+        <Route path="customer" element={<OldCustomer />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

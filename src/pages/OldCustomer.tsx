@@ -1,12 +1,14 @@
 import * as React from "react";
-import { Paper, Container } from "@mui/material";
+import { Typography, Paper, Container } from "@mui/material";
 import PersonForm from "../components/PersonForm";
 import Terms from "../components/Terms";
 import POLiForm from "../components/POLiForm";
+import ButtonGroup from "../components/ButtonGroup";
 import Copyright from "../layouts/CopyRight";
 import HomeLogo from "../assets/images/home_logo.png";
+import UnitsTable from "../components/UnitsTable";
 
-const NewCustomer = () => {
+const OldCustomer = () => {
   return (
     <React.Fragment>
       {/* Container */}
@@ -23,18 +25,10 @@ const NewCustomer = () => {
             </Typography> */}
             <img src={HomeLogo} className="w-[40%] self-center" />
             <React.Fragment>
-              {/* Storer Details */}
-              <PersonForm label="Storer Details" />
 
-              {/* Alternative contact person */}
-              <PersonForm label="Alternative Contact Person" />
-
-              {/* Terms */}
-              <Terms />
-
+              <UnitsTable />
               {/* POLi Form */}
               <POLiForm />
-
 
             </React.Fragment>
           </Paper>
@@ -46,4 +40,4 @@ const NewCustomer = () => {
     </React.Fragment>
   );
 };
-export default NewCustomer;
+export default OldCustomer;

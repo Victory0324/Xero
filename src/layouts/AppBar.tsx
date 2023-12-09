@@ -1,5 +1,7 @@
-import { AppBar, Typography, Toolbar } from "@mui/material";
-export default function WAppBar() {
+import { AppBar, Toolbar, Link } from "@mui/material";
+import HomeLogo from "../assets/images/home_logo.png";
+
+const WAppBar = () => {
   return (
     <AppBar
       position="absolute"
@@ -9,13 +11,13 @@ export default function WAppBar() {
         position: "relative",
         borderBottom: (t) => `1px solid ${t.palette.divider}`,
       }}
-      className="bg-[#1976d2]"
     >
       <Toolbar>
-        <Typography variant="h6" className="text-white">
-          WHITELEIGH
-        </Typography>
+        <Link color="inherit" href="/">
+          <img src={HomeLogo} className="w-[200px]" />
+        </Link>
       </Toolbar>
     </AppBar>
   );
-}
+};
+export default WAppBar;
